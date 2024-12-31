@@ -11,6 +11,8 @@ let redeemed = document.getElementById("redeemedalr");
 redeemed.style.display = 'none';
 let codediv = document.getElementById("newcode");
 codediv.style.display = 'none';
+let pikiredeemed = false;
+
 
 function clicked() {
     if (multipliernumber >= 1) {
@@ -74,15 +76,40 @@ function greg() {
     if (sanitizedText === "greg") {
         if (gregredeemed) {
             redeemed.style.display = 'block';
-            redeemed.innerHTML = "Already redeemed!";
+            redeemed.innerHTML = "Already redeemed! go to greg.com";
             setTimeout(() => {
                 redeemed.classList.add('gone');
-                setTimeout(() => redeemed.remove(), 500);
+                setTimeout(() => redeemed.display ='none', 500);
             }, 5000); 
+            redeemed.classList.remove('gone');
             checks();
         } else {
             clicks += 100;
             gregredeemed = true;
+            checks();
+        }
+    } 
+
+    if (sanitizedText === "pikidiary") {
+        if (pikiredeemed) {
+            redeemed.style.display = 'block';
+            redeemed.innerHTML = "Already redeemed! No more mona points for you...";
+            setTimeout(() => {
+                redeemed.classList.add('gone');
+                setTimeout(() => redeemed.display ='none', 500);
+            }, 5000); 
+            redeemed.classList.remove('gone');
+            checks();
+        } else {
+            clicks += 1000;
+            redeemed.style.display = 'block';
+            redeemed.innerHTML = "+1000000000 mona points";
+            setTimeout(() => {
+                redeemed.classList.add('gone');
+                setTimeout(() => redeemed.display ='none', 500);
+            }, 5000); 
+            redeemed.classList.remove('gone');
+            pikiredeemed = true;
             checks();
         }
     } 
@@ -135,4 +162,5 @@ function clickdivclose() {
         codediv.classList.add('gone');
         codediv.style.display = 'none';
         container.style.display = 'block';
+        redeemed.classList.remove('gone');
 }
