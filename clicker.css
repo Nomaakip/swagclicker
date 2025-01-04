@@ -1,0 +1,250 @@
+body {
+    background: rgb(238, 174, 202);
+    background: -moz-linear-gradient(140deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 72%);
+    background: -webkit-linear-gradient(140deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 72%);
+    background: linear-gradient(140deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 72%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca", endColorstr="#94bbe9", GradientType=1);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: grid;
+}
+
+
+#tenacity {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    background: linear-gradient(to right, #FFF 20%, #FF0 40%, #FF0 60%, #FFF 80%);
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: shine 1s linear infinite;
+
+    font-size: 40px;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+}
+
+#plus1 {
+    margin-top: -7px;
+    font-size: 20px;
+    animation: plus .1s ease-in-out;
+}
+
+#button-click,
+#mult,
+#codeclick,
+#buttoncode,
+#codedivc {
+    border-bottom-color: rgb(0, 0, 0, 0);
+    background: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 2555, 0.18);
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 37);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    height: 40px;
+    width: 120px;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    margin-left: 47%;
+
+}
+
+#auto {
+    border-bottom-color: rgb(0, 0, 0, 0);
+    background: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 2555, 0.18);
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 37);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    height: 40px;
+    width: 120px;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-left: 47%;
+    border-radius: 8px;
+}
+
+#achievementdiv {
+    margin-top: 200px;
+    margin-left: 47%;
+    background: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 2555, 0.18);
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 37);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    height: fit-content;
+    width: fit-content;
+    animation: swag .5s forwards;
+}
+
+#achievementdiv.gone {
+    animation: gone-anim .5s forwards;
+}
+
+#achievement1 {
+    font-size: 20px;
+}
+
+
+button:active {
+    animation: click .2s linear;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+#achievement1.gone {
+    animation: gone-anim .5s forwards;
+}
+
+#redeemedalr {
+    animation: swag .5s forwards;
+    font-size: 15px;
+}
+
+#redeemedalr.gone {
+    animation: gone-anim .5s forwards;
+}
+
+#codediv.gone {
+    animation: gone-anim .5s forwards;
+}
+
+#newcode {
+    border-bottom-color: rgb(0, 0, 0, 0);
+    background: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 2555, 0.18);
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 37);
+    backdrop-filter: blur(10px);
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    margin-left: 40%;
+    animation: swag .5s forwards;
+    margin-top: 50px;
+}
+
+#newcode h1 {
+    color: #ffff;
+    text-align: center;
+}
+
+#buttoncode {
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+#codedivc {
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+#newcode input {
+    margin-left: 8px;
+    border-bottom-color: rgb(0, 0, 0, 0);
+    background: none;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1)rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 2555, 0.18);
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 37);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    width: 380px;
+    height: 40px;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+}
+
+
+@keyframes swag {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes gone-anim {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+@keyframes click {
+    0% {
+        transform: scale(0.92);
+    }
+
+    100% {
+        transform: scale(1.00);
+    }
+}
+
+@keyframes plus {
+    0% {
+        margin-top: -12px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #newcode {
+
+        margin-left: 10px;
+    }
+}
+
+
+@keyframes shine {
+    to {
+        background-position: 200% 50%;
+    }
+}
+
+
+
+#tenacity {
+    background-image: linear-gradient(to right, #be00b5, #ffffff, #ff68a7, #650094, #f838a8, #e0e7ff, #b800b8);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    --bg-size: 200%;
+    color: transparent;
+    background-size: var(--bg-size);
+    animation: animate 7s linear infinite;
+}
+
+@keyframes animate {
+    to {
+        background-position: var(--bg-size);
+    }
+}
